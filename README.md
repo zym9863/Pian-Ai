@@ -1,24 +1,91 @@
-# pian-ai
+# 偏爱 (Pian Ai) - 情感记录与目标追踪应用
 
-## Project setup
+[简体中文](README.md) | [English](README_EN.md)
+
+偏爱 (Pian Ai) 是一个基于 Vue.js 的单页面应用程序，旨在帮助用户记录情感、追踪目标和创建个性化视觉板。应用名称"偏爱"寓意着对某人或某事的特别喜爱，这个应用就是为了记录和表达这种特别的情感而设计的。
+
+## 功能特点
+
+### 1. 情绪日记 / 告白信笺
+- 记录每日的心情波动、想法或写下如同歌词般强烈情感的"告白信件"
+- 支持多种情绪标签（坚定、愉快、期待、纠结、痛并快乐着、思念、感动、平静）
+- 每个情绪都有对应的图标，直观表达感受
+- 支持删除不需要的日记条目
+
+### 2. 决心印记 / 目标追踪
+- 设定与这份"偏爱"相关的个人目标或决心
+- 通过打卡记录目标完成进度
+- 直观的进度条显示完成情况
+- 支持删除不再需要的目标
+
+### 3. "我的答案" 视觉板
+- 一个个性化的展示板，集中展示所有关于这份"偏爱"的核心信念和感受
+- 支持添加图片、歌词/引言和文字内容
+- 可以自定义每个内容的背景颜色
+- 提供多种预设颜色选择
+
+## 技术栈
+
+- **前端框架**: Vue.js
+- **UI 组件库**: Quasar Framework
+- **状态管理**: Vuex
+- **路由管理**: Vue Router
+- **图标库**: Bootstrap Icons
+
+## 视觉设计
+
+- 现代化的色彩方案，以粉色和紫色为主色调
+- 响应式设计，适配不同屏幕尺寸
+- 移动端底部导航栏，桌面端顶部导航栏
+- 卡片式布局，带有精美的阴影和过渡效果
+- 丰富的图标增强视觉体验
+
+## 项目设置
+
+### 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 开发环境编译和热重载
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 生产环境编译和压缩
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### 代码检查和修复
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 项目结构
+
+```
+src/
+├── assets/            # 静态资源
+├── components/        # 可复用组件
+│   └── MobileNavBar.vue  # 移动端导航栏
+├── router/            # 路由配置
+├── store/             # Vuex 状态管理
+├── views/             # 页面视图
+│   ├── DiaryView.vue     # 情绪日记页面
+│   ├── GoalsView.vue     # 目标追踪页面
+│   ├── HomeView.vue      # 首页
+│   └── VisualBoardView.vue  # 视觉板页面
+├── App.vue            # 根组件
+└── main.js            # 入口文件
+```
+
+## 数据存储
+
+应用使用浏览器的 localStorage 进行数据存储，包括：
+- 日记条目
+- 目标和打卡记录
+- 视觉板内容
+
+## 自定义配置
+更多配置信息，请参阅 [Vue CLI 配置参考](https://cli.vuejs.org/config/)。
